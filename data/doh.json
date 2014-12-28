@@ -1,0 +1,18 @@
+{thin:
+{
+   percent: 65,
+   per: 125
+},
+
+ny:
+{
+   percent: 67,
+   per: 125
+},
+
+pan:
+{
+   percent: 70,
+   per: 125
+}
+}

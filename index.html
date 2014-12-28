@@ -1,0 +1,194 @@
+<!doctype html>
+<html class="no-js" lang="en" manifest="pizza.appcache">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pizza Doh!</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/doh.css" />
+    <script src="js/vendor/modernizr.js"></script>    
+    <script src="js/appCache.js"></script>    
+  </head>
+  <body>
+
+
+
+<nav class="top-bar" data-topbar role="navigation">
+
+
+  <ul class="title-area">
+    
+    <li class="name">
+      
+      <h1><a href="#">Pizza Doh!</a></h1>
+    </li>
+     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+    <!---<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>--->
+  </ul>
+
+  <section class="top-bar-section">
+    <!-- Right Nav Section -->
+ <ul class="right">
+     
+      
+    </ul>
+
+  </section>
+</nav>
+    
+    
+<div class="row">
+<div class="large-12 columns">
+
+
+
+    <fieldset>
+      <legend>
+        <h2>Quantity and Type</h2>
+      </legend>
+
+        
+
+<div class="controls">
+
+
+<div class="row">
+
+
+
+  <div class="medium-6 columns">
+    <label >What type of pizza?</label>
+    <select name="type" id="type">
+      <option value="thin">Thin Pizza</option>
+      <option value="ny">New York Styled Pizza</option>
+      <option value="pan">Pan / Thick Crust Pizza</option>
+    </select>
+  </div>
+
+  <div class="medium-6 columns end">
+   <label  for="quantity">How many relatively medium sized pizzas?</label>
+
+    <select  id="quantity" name="quantity">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option selected="true">4</option>
+      <option>5</option>
+      <option>6</option>
+      <option>7</option>
+      <option>8</option>
+      <option>9</option>
+      <option>10</option>
+      <option>11</option>
+      <option>12</option>
+      
+    </select>
+  </div>
+
+
+</div>
+
+    <div class="row">
+          <div class="small-12 columns text-center">
+            <span class="button secondary  tiny" id="show-starter">I am using a starter!</span>
+          </div>
+          </div>
+
+</div>
+
+    </fieldset>
+
+
+    <div id="starter-controls">
+    <fieldset>
+      <legend><h2>Starter Ingredients</h2></legend>
+
+
+
+
+        <div class="row">
+          <div class="medium-6 columns">
+            <label  for="starter-flour">Flour</label>
+            <select  id="starter-flour" name="starter-flour">
+              <option selected="true">0</option>
+              <option>50</option>
+              <option>100</option>
+              <option>150</option>
+              <option>200</option>
+              <option>250</option>
+            </select>
+          </div>
+
+           <div class="medium-6 columns">
+            <label  for="starter-water">Water</label>
+            
+            <select  id="starter-water" name="starter-water">
+              <option selected="true">0</option>
+              <option>50</option>
+              <option>100</option>
+              <option>150</option>
+              <option>200</option>
+              <option>250</option>
+            </select>
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </fieldset>
+</div>
+
+
+    <div id="result-container">
+    <fieldset>
+      <legend><h2>Ratios</h2></legend>
+        <div class="row">
+
+          <div class="medium-8 medium-offset-4 columns end">
+            <p>You should use <span class="result" id="flour-needed"></span> grams of flour</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="medium-4 columns">
+            
+          </div>
+
+          <div class="medium-8 medium-offset-4 columns end">
+            <p>You should use <span class="result" id="water-needed"></span> grams of water.</p>
+          </div>
+        </div>
+  </fieldset>
+      </div>
+
+
+
+    <fieldset>
+
+      <div class="row">
+
+        <div class="medium-3 small-12 small-expand columns right">
+          <button id="calculate" class="button expand">Calculate</button>
+          <button id="reset" class="button alert">Start Over</button>
+        </div>
+
+      </div>
+
+
+    </fieldset>
+
+
+
+</div>
+    </div>
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script src="js/doh.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>
