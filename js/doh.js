@@ -2,13 +2,13 @@ $(document).ready(function(){
 
 
 $('input').blur(function(){
-	console.log('trigger calculate')
+	 //console.log('trigger calculate') 
 	$('#calculate').trigger('click');
 })
 
 $('select').change(function(){
 	if($('#flour-needed').text() !== ""){
-		console.log('trigger calculate')
+		//console.log('trigger calculate')
 		$('#calculate').trigger('click');
   }
 })
@@ -20,7 +20,7 @@ $('#show-starter').click(function(){
 	$('#starter-water').val("150")
 
 
-    console.log('trigger calculate')
+    //console.log('trigger calculate')
     $('#calculate').trigger('click');
   
 })
@@ -49,13 +49,14 @@ $('#calculate').click(function(){
   
   ratio = doh[cd.type]
 
-  	console.log(cd)
-  	console.log(ratio)
-  	console.log( 'for a ' + cd.type  + ', use a ' + ratio.percent + ' ratio')
+    console.log(cd)
+    //console.log(ratio)
 
+  water = ((ratio.per * cd.quantity) * ratio.percent / 100) - cd.starter_water
   flour = (ratio.per * cd.quantity) - cd.starter_flour
-  water = (flour * ratio.percent / 100) - cd.starter_water
+  console.log( flour * ratio.percent / 100 )
 
+  console.log( 'For a ' + cd.type  + ' pizza, use (' + flour +' flour and ' + water + ') ' + ratio.percent + ' ratio')
   //console.log(flour + ' flour and ' + water + 'water')
 
 
