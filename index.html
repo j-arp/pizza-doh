@@ -1,177 +1,128 @@
-<!doctype html>
-<html class="no-js" lang="en" manifest="pizza.appcache" ng-app="pizza_doh">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pizza Doh!</title>
-    <link rel="stylesheet" href="css/foundation.css" />
-    <link rel="stylesheet" href="css/doh.css" />
-    <script src="bower_components/angular/angular.min.js"></script>
-    <script src="js/vendor/modernizr.js"></script>
-    
-    <script type="text/javascript" src="app/controllers/main_controller.js"></script>
-  </head>
-  <body ng-controller="main">
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title>Pizza Doh! - Materialize</title>
 
-
-<nav class="top-bar" data-topbar role="navigation">
-  <ul class="title-area">
-    <li class="name">
-      <h1><a href="#">Pizza Doh!</a></h1>
-    </li>
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <ul id="dd-items" class="dropdown-content">
+    <li><a href="http://www.amazon.com/Antimo-Caputo-Chefs-00-Flour/dp/B001TZJ3VC" target="_blank">Buy Flour</a></li>
   </ul>
 
-  <section class="top-bar-section">
-    <!-- Right Nav Section -->
-    <ul class="right"></ul>
-  </section>
-</nav>
+  <ul id="dd-recipes" class="dropdown-content">
+    <li><a href="http://www.food.com/recipe/california-pizza-kitchen-thai-chicken-pizza-62778" target="_blank">Thai Pizza</a></li>
+  </ul>
 
+  <ul id="dd-links" class="dropdown-content">
+    <li><a href="http://www.kingarthurflour.com/blog/2015/01/05/best-pizza-youll-ever-make/" target="_blank">Another take on it</a></li>
+  </ul>
 
-<div class="row">
-<div class="large-12 columns">
+    <div class="navbar-fixed">
+        <nav class="grey lighten-5" role="navigation">
+          <div class="nav-wrapper container">
+            <a id="logo-container" href="index.html" class="brand-logo">Pizza Doh!</a>
+           
+            <ul class="right hide-on-med-and-down">
+            <li><a class="dropdown-button" href="#!" data-activates="dd-recipes">Recipes<i class="material-icons right">arrow_drop_down</i></a></li>
+            <li><a class="dropdown-button" href="#!" data-activates="dd-items">Buy Stuff<i class="material-icons right">arrow_drop_down</i></a></li>
+            <li><a class="dropdown-button" href="#!" data-activates="dd-links">Links<i class="material-icons right">arrow_drop_down</i></a></li>
+           </ul>
 
-    <fieldset>
-      <legend>
-        <h2>Quantity and Type</h2>
-      </legend>
-
-<div class="controls">
-
-
-<div class="row">
-  <div class="medium-6 columns">
-    <label >What type of pizza?</label>
-    <select name="type" id="type">
-      <option ng-repeat="type in types" value="{{type.code}}">{{type.name}}</option>
-    </select>
-  </div>
-
-  <div class="medium-6 columns end">
-   <label  for="quantity">How many relatively medium sized pizzas?</label>
-
-    <select  id="quantity" name="quantity">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option selected="true">4</option>
-      <option>5</option>
-      <option>6</option>
-      <option>7</option>
-      <option>8</option>
-      <option>9</option>
-      <option>10</option>
-      <option>11</option>
-      <option>12</option>
-
-    </select>
-  </div>
-
-
-</div>
-
-    <div class="row">
-          <div class="small-12 columns text-center">
-            <span class="button secondary  tiny" id="show-starter">I am using a starter!</span>
+            <ul id="nav-mobile" class="side-nav">
+              <li><a class="dropdown-button" href="#!" data-activates="dd-recipes">Recipes<i class="material-icons right">arrow_drop_down</i></a></li>
+              <li><a class="dropdown-button" href="#!" data-activates="dd-items">Buy Stuff<i class="material-icons right">arrow_drop_down</i></a></li>
+              <li><a class="dropdown-button" href="#!" data-activates="dd-links">Links<i class="material-icons right">arrow_drop_down</i></a></li>        
+            </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
           </div>
-          </div>
-
-</div>
-
-    </fieldset>
-
-
-    <div id="starter-controls">
-    <fieldset>
-      <legend><h2>Starter Ingredients</h2></legend>
-
-
-
-
-        <div class="row">
-          <div class="medium-6 columns">
-            <label  for="starter-flour">Flour</label>
-            <select  id="starter-flour" name="starter-flour">
-              <option selected="true">0</option>
-              <option>50</option>
-              <option>100</option>
-              <option>150</option>
-              <option>200</option>
-              <option>250</option>
-            </select>
-          </div>
-
-           <div class="medium-6 columns">
-            <label  for="starter-water">Water</label>
-
-            <select  id="starter-water" name="starter-water">
-              <option selected="true">0</option>
-              <option>50</option>
-              <option>100</option>
-              <option>150</option>
-              <option>200</option>
-              <option>250</option>
-            </select>
-          </div>
-
+        </nav>
         </div>
+
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <h1 class="header center teal-text text-lighten-2">Pizza Doh!</h1>
+        <div class="row center">
+          <h5 class="header col s12 brown-text dark">Perfect Dough Forever...</h5>
+        </div>
+        <div class="row center">
+          <a href="doit.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Start Measuring</a>
+        </div>
+        <br><br>
 
       </div>
-
-
-    </fieldset>
-</div>
-
-
-    <div id="result-container">
-    <fieldset>
-      <legend><h2>Ratios</h2></legend>
-        <div class="row">
-
-          <div class="medium-8 medium-offset-4 columns end">
-            <p>You should use <span class="result" id="flour-needed"></span> grams of flour</p>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="medium-4 columns">
-
-          </div>
-
-          <div class="medium-8 medium-offset-4 columns end">
-            <p>You should use <span class="result" id="water-needed"></span> grams of water.</p>
-          </div>
-        </div>
-  </fieldset>
-      </div>
-
-
-
-    <fieldset>
-
-      <div class="row">
-
-        <div class="medium-3 small-12 small-expand columns right">
-          <button id="calculate" class="button expand">Calculate</button>
-          <button id="reset" class="button alert">Start Over</button>
-        </div>
-
-      </div>
-
-
-    </fieldset>
-
-
-
-</div>
     </div>
+    <div class="parallax"><img src="img/dough.jpg" alt="Unsplashed background img 1"></div>
+  </div>
 
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/foundation.min.js"></script>
-    <script src="js/doh.js"></script>
-    <script>
-      $(document).foundation();
-    </script>
+
+  <div class="container">
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center grey-text"><i class="material-icons">flash_on</i></h2>
+            <h5 class="center">Flour</h5>
+
+            <p class="light">User the right flour. The quality of flour you use will make a difference. At a bare minimun, use "bread flour".</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center grey-text"><i class="material-icons">group</i></h2>
+            <h5 class="center">Ratios</h5>
+
+            <p class="light">Pizza dough is more science than art. Make sure you have a highly accurate scale that weighs in grams. You will have to be perfect in your measurments</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center grey-text"><i class="material-icons">settings</i></h2>
+            <h5 class="center">Technique</h5>
+
+            <p class="light">Quality flour. Accurate Measurements. Now it's up to you. Practice makes perfect so bake a lot of pizza.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="page-footer black">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Multiplied by Infinity</h5>
+          <p class="grey-text text-lighten-4">I make websites. My brother makes dough.</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Templated based on <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/doh.js"></script>
+  <script type="text/javascript" src="app/controllers/main_controller.js"></script>
   </body>
 </html>

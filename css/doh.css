@@ -1,37 +1,6 @@
 
 
-fieldset {
-	border: none;
-	margin: 0px;
-	padding: 0px;
-	}
-fieldset legend { width:100%;float:left;}
+span.result {font-weight: bold; font-style: italic; font-size: 1.2em; background-color: #ececec; border-radius:6px; padding:6px 8px 6px 6px;}
 
-fieldset legend h2{
-	font-size: 1.6em; border-bottom:thin solid ; margin-bottom:10px;
-	}
-
-span.result{font-weight: bold; font-style: italic; font-size: 1.2em}
-
-#result-container, #starter-controls{display:none;}
-
-span.toggle-controls{
-	background-color: #000;
-	padding: 2px 8px 6px 8px;
-	float: left;
-	color: #fff;
-	margin-left: 10px;
-	margin-right: 10px;
-	border-radius: 4px;
-	margin-top: 10px;
-}
-
-#reset{display:none;}
-
-.top-bar {
-	background: #B9A287;
-	overflow: visible;
-}
-
-.top-bar img{border-radius: 0px 0px 4px 4px;}
-.top-bar .name h1{font-size:2em;}
+/* #result-container, #starter-controls{display:none;} */
+.dropdown-content {  margin-top: 50px; wdith: 200px; }
