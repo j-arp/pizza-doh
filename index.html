@@ -1,67 +1,50 @@
 <!doctype html>
-<html class="no-js" lang="en" manifest="pizza.appcache">
+<html class="no-js" lang="en" manifest="pizza.appcache" ng-app="pizza_doh">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pizza Doh!</title>
     <link rel="stylesheet" href="css/foundation.css" />
     <link rel="stylesheet" href="css/doh.css" />
-    <script src="js/vendor/modernizr.js"></script>    
-    <script src="js/appCache.js"></script>    
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="js/vendor/modernizr.js"></script>
+    
+    <script type="text/javascript" src="app/controllers/main_controller.js"></script>
   </head>
-  <body>
+  <body ng-controller="main">
 
 
 
 <nav class="top-bar" data-topbar role="navigation">
-
-
   <ul class="title-area">
-    
     <li class="name">
-      
       <h1><a href="#">Pizza Doh!</a></h1>
     </li>
-     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-    <!---<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>--->
   </ul>
 
   <section class="top-bar-section">
     <!-- Right Nav Section -->
- <ul class="right">
-     
-      
-    </ul>
-
+    <ul class="right"></ul>
   </section>
 </nav>
-    
-    
+
+
 <div class="row">
 <div class="large-12 columns">
-
-
 
     <fieldset>
       <legend>
         <h2>Quantity and Type</h2>
       </legend>
 
-        
-
 <div class="controls">
 
 
 <div class="row">
-
-
-
   <div class="medium-6 columns">
     <label >What type of pizza?</label>
     <select name="type" id="type">
-      <option value="thin">Thin Pizza</option>
-      <option value="ny">New York Styled Pizza</option>
-      <option value="pan">Pan / Thick Crust Pizza</option>
+      <option ng-repeat="type in types" value="{{type.code}}">{{type.name}}</option>
     </select>
   </div>
 
@@ -81,7 +64,7 @@
       <option>10</option>
       <option>11</option>
       <option>12</option>
-      
+
     </select>
   </div>
 
@@ -121,7 +104,7 @@
 
            <div class="medium-6 columns">
             <label  for="starter-water">Water</label>
-            
+
             <select  id="starter-water" name="starter-water">
               <option selected="true">0</option>
               <option>50</option>
@@ -153,7 +136,7 @@
 
         <div class="row">
           <div class="medium-4 columns">
-            
+
           </div>
 
           <div class="medium-8 medium-offset-4 columns end">

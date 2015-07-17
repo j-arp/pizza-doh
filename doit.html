@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+<html lang="en" ng-app="pizza_doh">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title>Pizza Doh! - Materialize</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body ng-controller="main">
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo">Pizza Doh!</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+
+<div class="container">
+  <div class="section">
+
+    <div class="controls">
+      <div class="row">
+        <div class="m6 col">
+        <div class="input-field col s12">
+            <select name="type" id="type">
+              <option value="thin">Thin</option>
+              <option value="nyc">New York Style</option>
+            </select>
+          <label >What type of pizza?</label>
+          </div>
+        </div>
+
+        <div class="m6 col">
+        <div class="input-field col s12">
+          <select  id="quantity" name="quantity">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option selected="true">4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+
+          </select>
+         <label  for="quantity">How many relatively medium sized pizzas?</label>
+         </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="s12 col  center-align">
+          <span class="waves-effect waves-light darker btn" id="show-starter">I am using a starter!</span>
+        </div>
+      </div>
+
+  </div>
+</div>
+
+<div class="container">
+  <div class="row"   id="starter-controls">
+        <div class="col s12 m8">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">Starter Ingredients</span>
+
+              <div class="row">
+                <div class="m6 col">
+                  <label  for="starter-flour">Flour</label>
+                  <select  id="starter-flour" name="starter-flour">
+                    <option selected="true">0</option>
+                    <option>50</option>
+                    <option>100</option>
+                    <option>150</option>
+                    <option>200</option>
+                    <option>250</option>
+                  </select>
+                </div>
+
+                 <div class="m6 col">
+                  <label  for="starter-water">Water</label>
+
+                  <select  id="starter-water" name="starter-water">
+                    <option selected="true">0</option>
+                    <option>50</option>
+                    <option>100</option>
+                    <option>150</option>
+                    <option>200</option>
+                    <option>250</option>
+                  </select>
+                </div>
+
+            </div>
+            <div class="card-action">
+              <a href="#">This is a link</a>
+              <a href="#">This is a link</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+            <div class="row">
+          <h2>Ratios</h2>
+
+              <div class="m8 col end">
+                <p>You should use <span class="result" id="flour-needed"></span> grams of flour</p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="m4 col">
+
+              </div>
+
+              <div class="m8 moffset-4 col end">
+                <p>You should use <span class="result" id="water-needed"></span> grams of water.</p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="row">
+
+            <div class="m3 small-12 small-expand col right">
+              <button id="calculate" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons right">equalizer</i></button>
+              <button id="reset" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons right">replay</i></button>
+            </div>
+
+          </div>
+
+
+
+
+
+    </div>
+</div>
+
+
+
+
+
+  <footer class="page-footer teal">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Multiplied by Infinity</h5>
+          <p class="grey-text text-lighten-4">I make websites. My brother makes dough.</p>
+        </div>
+
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Templated based on <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/doh.js"></script>
+  <script type="text/javascript" src="app/controllers/main_controller.js"></script>
+  </body>
+</html>
